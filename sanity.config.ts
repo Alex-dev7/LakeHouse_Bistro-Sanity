@@ -8,7 +8,7 @@ const config = defineConfig({
     projectId: 'yq1bqh12',
     dataset: 'production',
     title: "LakeHouse Bistro",
-    apiVersion: "2023-17-04",
+    apiVersion: "2023-04-17",
     basePath: "/admin",
     plugins: [deskTool()],
     schema: { types: schemas }
