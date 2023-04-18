@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default async function Home() {
 
   const info = await getRestaurantInfo()
-  console.log(info[0].email)
+  console.log(info[0])
 
   return (
     <main className="">

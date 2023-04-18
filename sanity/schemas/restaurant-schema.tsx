@@ -27,28 +27,25 @@ const restaurant = {
             type: 'url',   
         },
         {
+            type: 'object',
             name: 'social',
-            title: 'Social Links',
-            type: 'array',
-            of: [
+            fields: [
                 {
                     name: 'facebook',
-                    title: 'Facebook URL',
-                    type: 'url',
-                },
-                {
-                    name: 'tiktok',
-                    title: 'TikTok URL',
-                    type: 'url',
+                    type: "url",
                 },
                 {
                     name: 'instagram',
-                    title: 'Instagram URL',
-                    type: 'url',
-                }
+                    type: "url",
+                },
+                {
+                    name: 'tiktok',
+                    type: "url",
+                },
             ]
         }
     ]
 }
 
 export default restaurant
+

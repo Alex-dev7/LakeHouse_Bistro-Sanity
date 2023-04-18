@@ -10,8 +10,8 @@ const about = {
             type: 'string',
         },
         {
-            name: 'description',
-            title: 'Description',
+            name: 'content',
+            title: 'Content',
             type: 'array',
             of: [{ type: 'block' }]
         }

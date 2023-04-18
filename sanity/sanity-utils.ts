@@ -1,13 +1,11 @@
 import { createClient, groq } from "next-sanity";
+import clientConfig  from "./config/client-config"
 
+
+// fetch restaurant information
 export async function getRestaurantInfo() {
-    const client = createClient({
-        projectId: 'yq1bqh12',
-        dataset: 'production',
-        apiVersion: "2023-04-17",
-    })
 
-    return client.fetch(
+    return createClient(clientConfig).fetch(
         groq`*[_type == "restaurant"]{
             _id,
             address,
@@ -17,5 +15,5 @@ export async function getRestaurantInfo() {
             social
         }`
     )
-
 }
+
