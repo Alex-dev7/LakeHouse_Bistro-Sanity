@@ -1,5 +1,6 @@
-import restaurant from "./project-schema";
+import about from "./about-schema";
+import restaurant from "./restaurant-schema";
 
-const schemas = [restaurant]
+const schemas = [restaurant, about]
 
 export default schemas
