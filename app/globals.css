@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+header {
+  height: 90vh;
+  width: 100%;
+  background-image: url(../public/restaurant-newmood.jpg);
+  background-size: cover;
+  background-position: 40%;
+
+}
