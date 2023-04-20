@@ -14,6 +14,11 @@ const about = {
             title: 'Content',
             type: 'array',
             of: [{ type: 'block' }]
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image'
         }
     ]
 }

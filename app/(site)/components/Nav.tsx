@@ -19,27 +19,27 @@ function Nav() {
                 </a>                
             </div>
             
-            <h2 className="text-2xl font-bold ">Lake House Bistro</h2>
+            <Link href="/" className="text-2xl font-bold ">Lake House Bistro</Link>
             <span className="text-md text-gray-400 self-center w-[202px] text-right">Lake George, NY</span>
         </div>
      
-        <nav className="flex justify-center gap-5 py-5 border text-md peer-hover:underline">
-          <Link href="#" className="link">
+        <nav className="flex justify-center gap-6 py-5 border text-md antialiased tracking-wide">
+          <Link href="/about" className="link hover:text-gray-400 ">
                 ABOUT
           </Link>
-          <Link href="#" className="link">
+          <Link href="#" className="link hover:text-gray-400">
                 EVENTS  
           </Link>  
-          <Link href="#" className="link">
+          <Link href="#" className="link hover:text-gray-400">
                 MENU  
           </Link>
-          <Link href="#" className="link">
+          <Link href="#" className="link hover:text-gray-400">
                 GALLERY  
           </Link>
-          <Link href="#" className="link">
+          <Link href="#" className="link hover:text-gray-400">
                WORK HERE
           </Link>   
-          <Link href="#" className="link">
+          <Link href="#" className="link hover:text-gray-400">
                 CONTACT
           </Link> 
         </nav>

@@ -15,12 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en" >
       
-      <body className="w-full mx-auto">
+      <body className="max-w-screen-2xl mx-auto">
       <Nav />
-      <Header /> 
-      <main>
+      <div>
         {children}
-      </main> 
+      </div> 
         
       </body>
     </html>
