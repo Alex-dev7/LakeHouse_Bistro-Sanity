@@ -23,7 +23,7 @@ function Nav() {
             <span className="text-md text-gray-400 self-center w-[202px] text-right">Lake George, NY</span>
         </div>
      
-        <nav className="flex justify-center gap-6 py-5 border text-md antialiased tracking-wide">
+        <nav className="flex justify-center gap-6 py-5 text-md antialiased tracking-wide">
           <Link href="/about" className="link hover:text-gray-400 ">
                 ABOUT
           </Link>

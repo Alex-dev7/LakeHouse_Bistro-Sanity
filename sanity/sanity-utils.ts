@@ -2,6 +2,7 @@ import { createClient, groq } from "next-sanity";
 import clientConfig  from "./config/client-config"
 import { Restaurant } from "@/types/Restaurant";
 import { About } from "@/types/About";
+import { Hours } from "@/types/Hours";
 
 
 // fetch restaurant information
@@ -19,6 +20,7 @@ export async function getRestaurantInfo(): Promise<Restaurant[]> {
     )
 }
 
+// fetch about information
 export async function getAbout(): Promise<About[]> {
 
     return createClient(clientConfig).fetch(
@@ -31,3 +33,13 @@ export async function getAbout(): Promise<About[]> {
 }
 
 
+export async function getContactInfo(): Promise<Hours[]> {
+
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "hours"]{
+            weekday,
+            open,
+            close
+        }`
+    )
+}
