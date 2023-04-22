@@ -1,5 +1,5 @@
 export type Hours = {
-    weekday: string;
+    day: string;
     open: string;
     close: string;
 }

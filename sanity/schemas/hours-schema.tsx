@@ -1,25 +1,25 @@
 const hours = {
-    name: 'hours',
-    title: 'Hours of Operation',
-    type: 'document',
+  name: "hours",
+  title: "Hours of Operation",
+  type: "document",
 
-    fields: [
-        {
-           name: 'weekday',
-           title: 'Weekday',
-           type: 'string', 
-        },
-        {
-            name: 'open',
-            title: 'Opening Time',
-            type: 'string', 
-        },
-        {
-            name: 'close',
-            title: 'Closing Time',
-            type: 'string', 
-         }
-    ]
-}
+  fields: [
+    {
+        name: "day",
+        title: "Day",
+        type: "string",
+    },
+    {
+      name: "open",
+      title: "Opening Time",
+      type: "string",
+    },
+    {
+      name: "close",
+      title: "Closing Time",
+      type: "string",
+    },
+  ],
+};
 
 export default hours

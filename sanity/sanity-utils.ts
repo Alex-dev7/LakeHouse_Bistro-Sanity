@@ -37,7 +37,7 @@ export async function getContactInfo(): Promise<Hours[]> {
 
     return createClient(clientConfig).fetch(
         groq`*[_type == "hours"]{
-            weekday,
+            day,
             open,
             close
         }`
