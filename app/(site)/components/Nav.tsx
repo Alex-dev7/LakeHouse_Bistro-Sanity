@@ -33,13 +33,13 @@ function Nav() {
           <Link href="#" className="link hover:text-gray-400">
                 MENU  
           </Link>
-          <Link href="#" className="link hover:text-gray-400">
+          <Link href="/gallery" className="link hover:text-gray-400">
                 GALLERY  
           </Link>
           <Link href="#" className="link hover:text-gray-400">
                WORK HERE
           </Link>   
-          <Link href="#" className="link hover:text-gray-400">
+          <Link href="#contact" className="link hover:text-gray-400">
                 CONTACT
           </Link> 
         </nav>
