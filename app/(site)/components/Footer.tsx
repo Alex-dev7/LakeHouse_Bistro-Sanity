@@ -20,7 +20,7 @@ async function Footer() {
      hours.sort((a , b) => {
         return map[a.day] - map[b.day]
      })
-     console.log(hours)
+     
 
   return (
     <>
@@ -41,7 +41,7 @@ async function Footer() {
             </a>
         </div>
         <div className="sm:mx-auto md:w-5/6 ">
-        <h4>OPENING TIMES</h4>
+        <h4>OPENING HOURS</h4>
         {hours?.map((hour, i) => (
             
             <div key={i} className="flex gap-2 justify-between text-gray-500">

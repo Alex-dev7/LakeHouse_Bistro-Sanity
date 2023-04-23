@@ -9,11 +9,7 @@ function Header() {
             <a href="#" className="z-10 text-white w-fit mx-auto border-2 border-white px-5 py-2 rounded-3xl text-lg mt-10 hover:bg-orange-400 hover:opacity-90 transition">
                 Book A Table
             </a>           
-       
-
-     
-            
-       
+         
     </header>
   )
 }

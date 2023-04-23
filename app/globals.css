@@ -24,7 +24,7 @@ body {
 } 
 
 header {
-  height: 90vh;
+  height: 85vh;
   width: 100%;
   background-image: url(../public/dock.png);
   background-size: cover;

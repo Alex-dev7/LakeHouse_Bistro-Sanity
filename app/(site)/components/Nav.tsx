@@ -24,12 +24,12 @@ function Nav() {
         </div>
      
         <nav className="flex justify-center gap-6 py-5 text-md antialiased tracking-wide">
+          <Link href="/" className="link hover:text-gray-400">
+                HOME  
+          </Link>  
           <Link href="/about" className="link hover:text-gray-400 ">
                 ABOUT
           </Link>
-          <Link href="#" className="link hover:text-gray-400">
-                EVENTS  
-          </Link>  
           <Link href="#" className="link hover:text-gray-400">
                 MENU  
           </Link>
