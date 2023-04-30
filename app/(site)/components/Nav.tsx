@@ -27,7 +27,7 @@ function Nav() {
           <Link href="/" className="link hover:text-gray-400">
                 HOME  
           </Link>  
-          <Link href="/about" className="link hover:text-gray-400 ">
+          <Link href="/about" className="link hover:text-gray-400">
                 ABOUT
           </Link>
           <Link href="#" className="link hover:text-gray-400">

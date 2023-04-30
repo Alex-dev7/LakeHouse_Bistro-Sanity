@@ -2,8 +2,7 @@
 import { getAbout } from "@/sanity/sanity-utils"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
-import { Suspense } from "react"
-import Loading from "./loading"
+
 
 async function About() {
 
