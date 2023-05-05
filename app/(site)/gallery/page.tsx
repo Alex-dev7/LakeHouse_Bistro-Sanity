@@ -3,27 +3,46 @@
 import Image from 'next/image'
 import { BsChevronCompactLeft, BsChevronCompactRight  } from "react-icons/bs"
 import { getGallery } from '@/sanity/sanity-utils'
-import { Suspense, useEffect } from 'react'
-import  { useState } from 'react'
-import BigImage from './bigImage'
-
+import BigImage from './component/BigImage'
+import  { Suspense, useEffect, useState } from 'react'
+// import Loading from './component/loading'
+ const photo = "https://cdn.sanity.io/images/yq1bqh12/production/c8e80dfd7211163f467f822c105ed93fa42d2147-1536x2048.jpg"
 
 async function Gallery() {
-    
-     const [banner, setBanner] = useState<any>(0)
+  // const [images, setImages] = useState([])
+  const [popup, setPopup] = useState(true)
+   const [popupImage, setPopupImage] = useState( photo )
+   const [index, setIndex] = useState(0)
+   const gallery = await getGallery()
+ 
+ 
 
+
+   function handleClick(i: number) {
+    // setPopupImage(img);
+    // setPopup(true);
+    setIndex(i)
+    console.log('clicked')
+  }
+
+
+   function closePopup(){
+     setPopup(false)
+   }
+    // const [images, setImages] = useState<object[]>(gallery)
+    //  const [banner, setBanner] = useState('')
+     
     // useEffect(() => {
-    //   setBanner(gallery[0].image)
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
+       
+    //     setImages(gallery)
+    //     setBanner(gallery[0].image)
+    
+    
     // }, [])
-      const gallery = await getGallery()
+      
     
 // https://cdn.sanity.io/images/yq1bqh12/production/c8e80dfd7211163f467f822c105ed93fa42d2147-1536x2048.jpg
 
-    function handleClick(i: number){
-      setBanner(i)
-      console.log("here")
-    }
   
 
     const slideLeft = () => {
@@ -37,12 +56,27 @@ async function Gallery() {
     }
     
   return (<>
-  <Suspense fallback={<div className='bg-orange-100 py-8 h-[500px]'>Loading ...</div>} >
-         <BigImage banner={banner}  />
-  </Suspense>
-  <div className='bg-orange-100 py-8'>
 
-            
+  {/* {popup && (
+        <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-gray-900 bg-opacity-75">
+          <Image
+            src={popupImage}
+            alt=""
+            width={220}
+            height={300}
+            fill
+            className=''
+            onClick={closePopup}
+          />
+        </div>
+      )} */}
+  <div className='py-8 z-50 min-h-screen flex flex-col '>
+      {/* <Suspense fallback={<Loading/>} > */}
+    
+          {/* @ts-expect-error Async Server Component */}
+       <BigImage i={gallery[index].image}  />
+  {/* </Suspense> */}
+
 
       <div  className='relative flex items-center align-top'>
         <BsChevronCompactLeft
@@ -60,7 +94,7 @@ async function Gallery() {
                     width={220}
                     height={300}
                     
-                    className=' brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
+                    className='w-auto max-h-[250px] brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
                     />
 
                 </div>

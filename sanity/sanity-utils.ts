@@ -1,9 +1,11 @@
+
 import { createClient, groq } from "next-sanity";
 import clientConfig  from "./config/client-config"
 import { Restaurant } from "@/types/Restaurant";
 import { About } from "@/types/About";
 import { Hours } from "@/types/Hours";
 import Gallery from "@/types/Gallery";
+import next from "next/types";
 
 
 // fetch restaurant information
@@ -52,6 +54,6 @@ export async function getGallery(): Promise<Gallery[]> {
         groq`*[_type == "gallery"]{
             "image": image.asset->url,
             caption,
-        }`, {caches: 'force-cache'}
+        }`, {next: "no-cache"}
     )
 }

@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en"  >
       
-      <body className="max-w-screen-2xl mx-auto scroll-smooth">
+      <body className="max-w-screen-2xl min-h-screen mx-auto scroll-smooth box-border ">
       <Nav />
-      <div>
+      <div className=' min-h-screen md:min-h-[700px] lg:min-h-[800px]'>
         {children}
       </div> 
       {/* @ts-expect-error Server Component */}
