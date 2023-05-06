@@ -1,0 +1,51 @@
+input {
+    width: 300px;
+    height: 35px;
+    padding: 3px 10px;
+    border: .5px solid gray;
+    background-color: rgba(233, 204, 107, 0.07);
+}
+input:hover,  textarea:hover {
+    border: 1px solid black;
+}
+
+input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    margin: auto 1rem;
+    transform: translateY(4px);
+
+}
+
+#submit {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(39, 39, 39);
+    color: black;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    height: 40px;
+    padding: 0 20px;
+    letter-spacing: 3px;
+ }
+ #submit:hover {
+     background-color: rgb(39, 39, 39); 
+     color: white;
+     transition: background-color 0.8s;
+ }
+
+
+input:focus {
+    outline: 1px solid rgb(0, 0, 0);
+}
+
+input[type="checkbox"]:focus, textarea:focus {
+    outline: none;
+}
+
+
+textarea {
+    background-color: rgba(233, 204, 107, 0.07);
+    border: .5px solid gray;
+}

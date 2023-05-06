@@ -6,7 +6,7 @@ import { TbBrandTiktok } from "react-icons/tb"
 function Nav() {
   return (
     <div className="w-full flex flex-col">
-        <div className="flex justify-between py-5 mx-5 border-b border-black">
+        <div className="flex justify-between py-5 border-b border-black bg-blue-100 bg-opacity-30  px-4">
             <div className="flex gap-3 text-lg self-center w-[202px]">
                 <a href="#">
                     <CiFacebook/>

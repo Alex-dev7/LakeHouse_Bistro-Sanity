@@ -18,8 +18,9 @@ header {
 
 }
 
-.about, .gallery {
+.about, .gallery, .career {
   background-image: url(../public/pattern2.png);
   background-repeat: repeat;
-  min-height: 85vh;
+  min-height: 80vh;
+  margin-bottom: 5rem;
 }
