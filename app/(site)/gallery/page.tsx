@@ -50,9 +50,9 @@ async function Gallery() {
                     src={img.image}
                     alt={img.caption || "Lake House Bistro"}
                     width={220}
-                    height={300}
+                    height={250}
                     
-                    className='w-auto max-h-[250px] brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
+                    className='w-auto max-h-[200px] brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
                     />
 
                 </div>

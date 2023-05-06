@@ -3,7 +3,7 @@ import './career.css'
 function Career() {
   return (
     <>
-        <div className="career">
+        <div className="career border-2 border-gray">
         <h3 className="font-bold text-center text-xl py-4">Lake House Bistro - Employment Application</h3> 
         <div className="sm:w-fit sm:mx-auto  md:mx-6 ">
         

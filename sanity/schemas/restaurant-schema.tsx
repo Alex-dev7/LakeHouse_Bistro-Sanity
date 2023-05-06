@@ -27,23 +27,21 @@ const restaurant = {
             type: 'url',   
         },
         {
-            type: 'object',
-            name: 'social',
-            fields: [
-                {
-                    name: 'facebook',
-                    type: "url",
-                },
-                {
-                    name: 'instagram',
-                    type: "url",
-                },
-                {
-                    name: 'tiktok',
-                    type: "url",
-                },
-            ]
-        }
+            name: 'facebook',
+            title: 'Facebook',
+            type: 'url',
+        },
+        {
+            name: 'instagram',
+            title: 'Instagram',
+            type: 'url',
+        },
+        {
+            name: 'tiktok',
+            title: 'TikTok',
+            type: 'url',
+        },
+
     ]
 }
 

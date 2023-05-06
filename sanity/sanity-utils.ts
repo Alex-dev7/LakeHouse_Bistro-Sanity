@@ -5,7 +5,8 @@ import { Restaurant } from "@/types/Restaurant";
 import { About } from "@/types/About";
 import { Hours } from "@/types/Hours";
 import Gallery from "@/types/Gallery";
-import next from "next/types";
+import Menu from "@/types/Menu";
+
 
 
 // fetch restaurant information
@@ -18,7 +19,21 @@ export async function getRestaurantInfo(): Promise<Restaurant[]> {
             phone,
             email,
             reserve,
-            social
+            facebook,
+            instagram,
+            tiktok
+        }`
+    )
+}
+
+// fetch event information
+export async function getEvent(): Promise<Event[]> {
+
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "event"]{
+            title,
+            content,
+            "image": image.asset->url
         }`
     )
 }
@@ -55,5 +70,16 @@ export async function getGallery(): Promise<Gallery[]> {
             "image": image.asset->url,
             caption,
         }`, {next: "no-cache"}
+    )
+}
+
+// get the menu
+export async function getMenu(): Promise<Menu[]> {
+
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "menu"]{
+            title,
+            "image": image.asset->url,
+        }`
     )
 }

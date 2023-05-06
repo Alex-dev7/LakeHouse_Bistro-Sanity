@@ -4,9 +4,7 @@ export type Restaurant = {
     phone: string;
     email: string;
     reserve: string;
-    social: Array<{
-        facebook: string;
-        instagram: string;
-        tiktok: string;
-    }>
+    facebook: string;
+    instagram: string;
+    tiktok: string;
 }
