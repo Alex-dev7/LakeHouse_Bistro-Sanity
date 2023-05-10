@@ -24,29 +24,29 @@ async function Nav() {
                 </a>                
             </div>
             
-            <Link href="/" className="text-2xl font-bold ">Lake House Bistro</Link>
+            <Link href="/" as={'/'} className="text-2xl font-bold ">Lake House Bistro</Link>
             <span className="text-md text-gray-400 self-center w-[202px] text-right">Lake George, NY</span>
         </div>
      
         <nav className="flex justify-center gap-6 py-5 text-md antialiased tracking-wide bg-blue-100 bg-opacity-20">
-          <Link href="/" className="link hover:text-gray-400 ">
+          <Link href="/" as={'/'} className="link hover:text-gray-400 ">
                 HOME  
           </Link>  
-          <Link href="/about" className="link hover:text-gray-400 ">
+          <Link href="/about" as={'/about'} className="link hover:text-gray-400 ">
                 ABOUT
           </Link>
           <Link href="#" className="link hover:text-gray-400 ">
                 MENU  
           </Link>
-          <Link href="/gallery" className="link hover:text-gray-400 ">
+          <Link href="/gallery" as={'/gallery'} className="link hover:text-gray-400 ">
                 GALLERY  
           </Link>
-          <Link href="/career" className="link hover:text-gray-400 ">
+          <Link href="/career" as={'/career'} className="link hover:text-gray-400 ">
                WORK HERE
           </Link>   
-          <Link href="#contact" className="link hover:text-gray-400 ">
+          <a href="#contact"  className="link hover:text-gray-400 ">
                 CONTACT
-          </Link> 
+          </a> 
         </nav>
     </div>
   )

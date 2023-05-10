@@ -9,6 +9,7 @@ import  { useState } from 'react'
 
 async function Gallery() {
 
+  //index for the big image
    const [index, setIndex] = useState(0)
    const gallery = await getGallery()
  
@@ -31,14 +32,14 @@ async function Gallery() {
     
   return (
   <>
-  <div className='gallery py-8 z-50  flex flex-col '>
+  <div className='gallery py-8 z-50  flex flex-col border-[0.5px] border-yellow-500'>
      
       {/* @ts-expect-error Async Server Component */}
       <BigImage i={gallery[index].image}  />
  
       <div  className='relative flex items-center align-top'>
         <BsChevronCompactLeft
-        className='h-[220px] hover:bg-gray-200 rounded-md mx-2'
+        className='h-[220px] hover:bg-gray-300 rounded-md mx-2'
         onClick={slideLeft} size={40} />
         <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth p-4 scrollbar-hide'>
             {gallery?.map((img, i) => (
@@ -51,7 +52,7 @@ async function Gallery() {
                     alt={img.caption || "Lake House Bistro"}
                     width={220}
                     height={250}
-                    
+                    quality={5} 
                     className='w-auto max-h-[200px] brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
                     />
 
@@ -59,7 +60,7 @@ async function Gallery() {
             ))}        
         </div>
               <BsChevronCompactRight
-              className='h-[220px] hover:bg-gray-200 rounded-md mx-2'
+              className='h-[220px] hover:bg-gray-300 rounded-md mx-2'
               onClick={slideRight} size={40} />
       </div>
     </div>
