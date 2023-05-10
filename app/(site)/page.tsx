@@ -11,13 +11,13 @@ export default async function Home() {
   return ( <>
     <Header />
     <main className="">
-      <h2 className='text-gray-900 text-lg'>Events</h2>
+      <h2 className='text-gray-900 text-center my-5 text-4xl'>Events</h2>
       { events.map((event, i) => (
         <div key={i} 
-        className='flex justify-between w-8/12 my-4 '
+        className='flex justify-between w-8/12 my-4 mx-auto bg-yellow-100 p-4'
         >
           <div>
-            <h3>{event.title}</h3>
+            <h3 className='text-center m-2 text-2xl font-bold underline text-red-500'>{event.title}</h3>
             <PortableText value={event.content} />
           </div>
           <Image src={event.image} alt={event.title}  width={300} height={300} />
