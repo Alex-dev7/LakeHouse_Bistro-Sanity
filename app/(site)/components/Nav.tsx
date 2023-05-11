@@ -35,7 +35,7 @@ async function Nav() {
           <Link href="/about" as={'/about'} className="link hover:text-gray-400 ">
                 ABOUT
           </Link>
-          <Link href="#" className="link hover:text-gray-400 ">
+          <Link href="/menu" as={'/menu'} className="link hover:text-gray-400 ">
                 MENU  
           </Link>
           <Link href="/gallery" as={'/gallery'} className="link hover:text-gray-400 ">

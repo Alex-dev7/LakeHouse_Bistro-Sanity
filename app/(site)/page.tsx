@@ -20,7 +20,7 @@ export default async function Home() {
             <h3 className='text-center m-2 text-2xl font-bold underline text-red-500'>{event.title}</h3>
             <PortableText value={event.content} />
           </div>
-          <Image src={event.image} alt={event.title}  width={300} height={300} />
+          <Image src={event.image} alt={event.title}  width={500} height={300} />
         </div>
       ))}
     </main>
