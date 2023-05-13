@@ -41,14 +41,14 @@ async function Footer() {
             <GrMail className="self-center "/>
             {info.email}
             </a>
-            <div className="flex gap-6 text-2xl text-center mt-5">
-                <a href={restaurantInfo.facebook} target="_blank">
+            <div className="flex gap-6 text-2xl text-center mt-5 ">
+                <a href={restaurantInfo.facebook} target="_blank" className="hover:text-orange-400">
                     <CiFacebook/>
                 </a>
-                <a href={restaurantInfo.instagram} target="_blank">
+                <a href={restaurantInfo.instagram} target="_blank" className="hover:text-orange-400">
                     <CiInstagram/>
                 </a>
-                <a href={restaurantInfo.tiktok} target="_blank">
+                <a href={restaurantInfo.tiktok} target="_blank" className="hover:text-orange-400">
                     <TbBrandTiktok/>
                 </a>                  
             </div>

@@ -1,6 +1,6 @@
 type Menu = {
     title: string,
-    image: string,
+    file: string,
 }
 
 export default Menu
