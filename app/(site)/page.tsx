@@ -11,16 +11,16 @@ export default async function Home() {
   return ( <>
     <Header />
     <main className="">
-      <h2 className='text-gray-900 text-center my-5 text-4xl'>Events</h2>
+      { events ? <h2 className='text-red-400 text-center my-5 text-4xl font-bold'>Events</h2> : ""}
       { events.map((event, i) => (
         <div key={i} 
-        className='flex justify-between w-8/12 my-4 mx-auto bg-yellow-100 p-4'
+        className='grid grid-cols-2 justify-between w-8/12 my-4 mx-auto bg-yellow-100 p-4'
         >
-          <div>
+          <div className='flex flex-col content-center p-4'>
             <h3 className='text-center m-2 text-2xl font-bold underline text-red-500'>{event.title}</h3>
             <PortableText value={event.content} />
           </div>
-          <Image src={event.image} alt={event.title}  width={500} height={300} />
+          <Image src={event.image} alt={event.title}  width={500} height={300} className='object-cover h-[300px]'/>
         </div>
       ))}
     </main>

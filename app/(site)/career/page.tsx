@@ -3,12 +3,12 @@ import './career.css'
 function Career() {
   return (
     <>
-        <div className="career border-[0.5px] border-yellow-500">
+        <div className="career border-[0.5px] border-yellow-500 ">
         <h3 className="font-bold text-center text-xl py-4">Lake House Bistro - Employment Application</h3> 
         <div className="sm:w-fit sm:mx-auto  md:mx-6 ">
         
             <form action="https://formsubmit.co/c60d6b50cbdecbe2c930c286a9425268" method="POST" encType="multipart/form-data"
-               className="flex flex-col gap-5 "
+               className="flex flex-col gap-5"
             >
                 
 

@@ -28,6 +28,7 @@ input[type="checkbox"]{
     height: 40px;
     padding: 0 20px;
     letter-spacing: 3px;
+    margin-bottom: 1rem;
  }
  #submit:hover {
      background-color: rgb(39, 39, 39); 
