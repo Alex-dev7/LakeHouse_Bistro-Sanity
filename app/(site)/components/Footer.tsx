@@ -69,7 +69,7 @@ async function Footer() {
         ))}
         </div>
         <div className="md:col-span-2 lg:col-auto sm:mx-auto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181.10183399873463!2d-73.71274967889809!3d43.42657038721986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dfc4452d1bb475%3A0xa3c0466e664f3dd7!2sLake%20House%20Bistro!5e0!3m2!1sen!2sus!4v1682192562543!5m2!1sen!2sus" className="w-[400px] h-[200px]  border-[8px] border-zinc-300" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181.10183399873463!2d-73.71274967889809!3d43.42657038721986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dfc4452d1bb475%3A0xa3c0466e664f3dd7!2sLake%20House%20Bistro!5e0!3m2!1sen!2sus!4v1682192562543!5m2!1sen!2sus" className="w-[400px] h-[250px]  border-[8px] border-zinc-300" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
     <div className="flex justify-between px-4 bg-slate-800 text-slate-300 text-sm p-2">

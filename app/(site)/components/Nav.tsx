@@ -28,23 +28,23 @@ async function Nav() {
             <span className="text-md text-gray-400 self-center w-[202px] text-right">Lake George, NY</span>
         </div>
      
-        <nav className="flex justify-center gap-6 py-5 text-md antialiased tracking-wide bg-blue-100 bg-opacity-20">
-          <Link href="/" as={'/'} className="link hover:text-gray-400 ">
+        <nav className="flex justify-center gap-2  text-md antialiased tracking-wide bg-blue-100 bg-opacity-20 ">
+          <Link href="/" as={'/'} className="link p-4 hover:text-amber-400 ">
                 HOME  
           </Link>  
-          <Link href="/about" as={'/about'} className="link hover:text-gray-400 ">
+          <Link href="/about" as={'/about'} className="link  p-4 hover:text-amber-600">
                 ABOUT
           </Link>
-          <Link href="/menu" as={'/menu'} className="link hover:text-gray-400 ">
+          <Link href="/menu" as={'/menu'} className="link hover:text-amber-400 p-4">
                 MENU  
           </Link>
-          <Link href="/gallery" as={'/gallery'} className="link hover:text-gray-400 ">
+          <Link href="/gallery" as={'/gallery'} className="link hover:text-amber-400 p-4">
                 GALLERY  
           </Link>
-          <Link href="/career" as={'/career'} className="link hover:text-gray-400 ">
+          <Link href="/career" as={'/career'} className="link hover:text-amber-400 p-4">
                WORK HERE
           </Link>   
-          <a href="#contact"  className="link hover:text-gray-400 ">
+          <a href="#contact"  className="link hover:text-amber-400 p-4">
                 CONTACT
           </a> 
         </nav>
