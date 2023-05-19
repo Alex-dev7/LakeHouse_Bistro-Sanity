@@ -10,7 +10,7 @@ async function Nav() {
 
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col ">
         <div className="flex justify-between py-5 border-b border-black   px-4">
             <div className="flex gap-3 text-lg self-center w-[202px]">
                 <a href={restaurantInfo.facebook} target="_blank">
@@ -28,7 +28,7 @@ async function Nav() {
             <span className="text-md text-gray-400 self-center w-[202px] text-right">Lake George, NY</span>
         </div>
      
-        <nav className="flex justify-center gap-2  text-md antialiased tracking-wide bg-blue-100 bg-opacity-20 ">
+        <nav className="flex justify-center gap-2 text-md antialiased tracking-wide bg-blue-100 bg-opacity-20 ">
           <Link href="/" as={'/'} className="link p-4 hover:text-amber-400 ">
                 HOME  
           </Link>  

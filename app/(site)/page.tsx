@@ -12,7 +12,7 @@ export default async function Home() {
   return ( <>
     <Header />
 
-    <main className="my-[50px]">
+    <main className="my-[50px] bg-white z-10">
     <Link href={"/menu"} className='border border-black py-2 px-6 rounded-md my-5 shadow-md active:shadow-sm'>
     see our menu
     </Link>

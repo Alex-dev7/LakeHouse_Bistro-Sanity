@@ -10,11 +10,17 @@ body {
 } 
 
 header {
-  height: 85vh;
+  max-height: 85vh;
   width: 100%;
-  background-image: url(../public/dock.png);
-  background-size: cover;
-  background-position: 40%;
+  /* background-image: url(../public/dock.png); */
+  /* background-size: cover;
+  background-position: 40%; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  object-fit: cover;
+  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); */
 
 }
 
