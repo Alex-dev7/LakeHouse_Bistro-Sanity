@@ -12,9 +12,9 @@ export default async function Home() {
   return ( <>
     <Header />
 
-    <main className="my-[50px] bg-white z-10">
-    <Link href={"/menu"} className='border border-black py-2 px-6 rounded-md my-5 shadow-md active:shadow-sm'>
-    see our menu
+    <main className="my-[50px] bg-white z-10 py-8">
+    <Link href={"/menu"} className='border border-black py-2 px-6 rounded-md my-5 shadow-md active:shadow-sm ml-8'>
+    menu
     </Link>
       { events ? <h2 className='text-red-400 text-center my-5 text-4xl font-bold'>Events</h2> : ""}
       { events.map((event, i) => (

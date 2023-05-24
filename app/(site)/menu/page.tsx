@@ -4,7 +4,7 @@ import { getMenu } from "@/sanity/sanity-utils"
 async function Menu() {
 
     const menu = await getMenu()
-    console.log(menu)
+    // console.log(menu)
 
   return (
     <div className="menu flex gap-2 align-middle  justify-center content-center">

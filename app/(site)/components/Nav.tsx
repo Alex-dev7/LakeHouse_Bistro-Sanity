@@ -1,12 +1,20 @@
-
+"use client"
 import { getRestaurantInfo } from "@/sanity/sanity-utils"
 import Link from "next/link"
 import { CiFacebook, CiInstagram } from "react-icons/ci"
 import { TbBrandTiktok } from "react-icons/tb"
+import { useState } from "react"
 
 async function Nav() {
 
+  const [toggle, setToggle] = useState(false)
   const [restaurantInfo] = await getRestaurantInfo()
+
+  function handleClick(e: any){
+    e.target.style = {
+      color: "red",
+    }
+  }
 
 
   return (
@@ -41,10 +49,10 @@ async function Nav() {
           <Link href="/gallery" as={'/gallery'} className="link hover:text-amber-400 p-4">
                 GALLERY  
           </Link>
-          <Link href="/career" as={'/career'} className="link hover:text-amber-400 p-4">
+          <Link href="/career" as={'/career'} className="link hover:text-amber-400 p-4" onClick={handleClick}>
                WORK HERE
           </Link>   
-          <a href="#contact"  className="link hover:text-amber-400 p-4">
+          <a href="#contact"  className="link hover:text-amber-400 p-4" onClick={handleClick}>
                 CONTACT
           </a> 
         </nav>
