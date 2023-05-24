@@ -3,17 +3,16 @@ import { getRestaurantInfo } from "@/sanity/sanity-utils"
 import Link from "next/link"
 import { CiFacebook, CiInstagram } from "react-icons/ci"
 import { TbBrandTiktok } from "react-icons/tb"
-import { useState } from "react"
+import { usePathname } from 'next/navigation'
+
 
 async function Nav() {
 
-  const [toggle, setToggle] = useState(false)
+  const pathname = usePathname();
   const [restaurantInfo] = await getRestaurantInfo()
 
   function handleClick(e: any){
-    e.target.style = {
-      color: "red",
-    }
+ 
   }
 
 
@@ -37,22 +36,22 @@ async function Nav() {
         </div>
      
         <nav className="flex justify-center gap-2 text-md antialiased tracking-wide bg-blue-100 bg-opacity-20 ">
-          <Link href="/" as={'/'} className="link p-4 hover:text-amber-400 ">
+          <Link href="/" as={'/'} className={`${pathname === "/" ? "bg-amber-100 text-amber-700 font-bold" : ""} link p-4 hover:text-amber-400 mx-2`} >
                 HOME  
           </Link>  
-          <Link href="/about" as={'/about'} className="link  p-4 hover:text-amber-600">
+          <Link href="/about" as={'/about'} className={`${pathname === "/about" ? "bg-amber-100 text-amber-700 font-bold" : ""} link  p-4 hover:text-amber-600 mx-2`}>
                 ABOUT
           </Link>
-          <Link href="/menu" as={'/menu'} className="link hover:text-amber-400 p-4">
+          <Link href="/menu" as={'/menu'} className={`${pathname === "/menu" ? "bg-amber-100 text-amber-700 font-bold" : ""} link hover:text-amber-400 p-4 mx-2`}>
                 MENU  
           </Link>
-          <Link href="/gallery" as={'/gallery'} className="link hover:text-amber-400 p-4">
+          <Link href="/gallery" as={'/gallery'} className={`${pathname === "/gallery" ? "bg-amber-100 text-amber-700 font-bold" : ""} link hover:text-amber-400 p-4 mx-2`}>
                 GALLERY  
           </Link>
-          <Link href="/career" as={'/career'} className="link hover:text-amber-400 p-4" onClick={handleClick}>
+          <Link href="/career" as={'/career'} className={` ${pathname === "/career" ? "bg-amber-100 text-amber-700 font-bold" : ""} link hover:text-amber-400 p-4 mx-2`}>
                WORK HERE
           </Link>   
-          <a href="#contact"  className="link hover:text-amber-400 p-4" onClick={handleClick}>
+          <a href="#contact"   className="link hover:text-amber-400 p-4 active:text-red-400 mx-2" onClick={handleClick}>
                 CONTACT
           </a> 
         </nav>
