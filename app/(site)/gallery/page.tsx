@@ -16,7 +16,6 @@ async function Gallery() {
 
    function handleClick(i: number) {
     setIndex(i)
-    console.log('clicked')
   }
 
 
