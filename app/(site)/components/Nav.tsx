@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { getRestaurantInfo } from "@/sanity/sanity-utils"
 import Link from "next/link"
@@ -8,14 +8,13 @@ import { usePathname } from 'next/navigation'
 
 
 
-
 async function Nav() {
 
-  const pathname = usePathname();
-  const [restaurantInfo] = await getRestaurantInfo()
+const pathname = usePathname();
+const [restaurantInfo] = await getRestaurantInfo()
  
   return (
-    <div className="w-full flex flex-col">
+    <div id="div" className="w-full flex flex-col">
         <div className="flex justify-between py-5 border-b border-black   px-4">
             <div className="flex gap-5 text-lg self-center w-[202px]">
                 <a href={restaurantInfo.facebook} target="_blank">
@@ -33,7 +32,7 @@ async function Nav() {
             <span className="text-md text-gray-400 self-center w-[202px] text-right">Lake George, NY </span>
         </div>
      
-        <nav className="flex justify-center gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1">
+        <nav className={`flex justify-center  gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1`}>
           <Link href="/" as={'/'} className={`${pathname === "/" ? "bg-amber-100 text-amber-700 font-bold" : ""} link px-4 py-3 hover:text-amber-400 mx-2`} >
                 HOME  
           </Link>  
