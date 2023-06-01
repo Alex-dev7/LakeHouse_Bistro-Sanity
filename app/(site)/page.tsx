@@ -15,10 +15,10 @@ export default async function Home() {
     <Header />
 
     <main className="my-[50px] bg-white z-10 py-8">
-    <Link href={"/menu"} className='border border-black py-2 px-6 rounded-md my-5 shadow-md active:shadow-sm ml-8'>
-    menu
+    <Link href={"/menu"} className='border border-black flex gap-3 w-fit  py-2 px-6 rounded-md my-8 shadow-md active:shadow-none hover:-translate-y-2 transition-all'>
+    See our menu <span>&#9832;</span>
     </Link>
-      { events ? <h2 className='text-red-400 text-center my-5 text-4xl font-bold'>Events</h2> : ""}
+      { events ? <h2 className='text-red-400 text-center text-4xl font-bold my-8'>Events</h2> : ""}
       { events.map((event, i) => (
         <motion.div
         initial={{opacity: 0}}
@@ -26,13 +26,13 @@ export default async function Home() {
         transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
         viewport={{ once: true }}
         key={i} 
-        className='grid grid-cols-2 justify-between w-10/12 my-4 mx-auto bg-amber-300 p-4'
+        className='grid grid-cols-2 justify-between w-10/12 my-4 mx-auto bg-amber-200 p-4 shadow-md'
         >
           <div className='flex flex-col content-center p-4'>
             <h3 className='text-center m-2 text-2xl font-bold underline text-red-500'>{event.title}</h3>
             <PortableText value={event.content} />
           </div>
-          <Image src={event.image} alt={event.title}  width={500} height={300} className='object-cover h-[300px]    border-[8px] border-white rounded-md'/>
+          <Image src={event.image} alt={event.title}  width={500} height={300} className='object-cover h-[300px]  mx-auto  border-[8px] border-white rounded-md'/>
         </motion.div>
       ))}
     </main>

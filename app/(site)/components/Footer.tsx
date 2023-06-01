@@ -29,6 +29,9 @@ async function Footer() {
     <footer  className="w-full md:h-[400px] grid md:grid-cols-2 lg:grid-cols-3 gap-4 bg-slate-700  text-white py-4 content-center">
         <div id="contact" className="flex flex-col gap-2 sm:mx-auto  md:w-5/6 ">
             <h4 className="my-2">CONTACT US</h4>
+            <a href={info.reserve} target="_blank" className=" text-bold flex gap-4 hover:text-orange-400">
+            <span>&#9734;</span> Make a reservation
+            </a>
            <address className="text-gray-400 flex gap-2 ">
             <GrLocation className="text-xl text-[#616c76] "/>
             {info.address}

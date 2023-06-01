@@ -14,7 +14,7 @@ const pathname = usePathname();
 const [restaurantInfo] = await getRestaurantInfo()
  
   return (
-    <div id="div" className="w-full flex flex-col">
+    <div id="div" className="w-full  flex flex-col ">
         <div className="flex justify-between py-5 border-b border-black   px-4">
             <div className="flex gap-5 text-lg self-center w-[202px]">
                 <a href={restaurantInfo.facebook} target="_blank">
@@ -29,7 +29,7 @@ const [restaurantInfo] = await getRestaurantInfo()
             </div>
             
             <Link href="/" as={'/'} className="text-2xl font-bold ">Lake House Bistro</Link>
-            <span className="text-md text-gray-400 self-center w-[202px] text-right">Lake George, NY </span>
+            <span className="text-sm text-gray-400 self-center w-[202px] text-right">325 Canada St, Lake George, NY </span>
         </div>
      
         <nav className={`flex justify-center  gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1`}>
