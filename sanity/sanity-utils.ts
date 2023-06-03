@@ -71,7 +71,7 @@ export async function getGallery(): Promise<Gallery[]> {
         groq`*[_type == "gallery"]{
             "image": image.asset->url,
             caption,
-        }`, {next: "no-cache"}
+        }`
     )
 }
 
@@ -86,12 +86,3 @@ export async function getMenu(): Promise<Menu[]> {
     )
 }
 
-
-// // weather data
-// export async function getTemp(){
-
-// //   const apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat={43.4262}&lon={73.7123}&appid={93be09e2a8029784917a7f15809b83f0}"
-//   return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=43.425996&lon=-73.712425&units=imperial&appid=93be09e2a8029784917a7f15809b83f0` )
-
-
-// }

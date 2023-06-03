@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import logo from "../../../public/Logo.svg"
+import logo from "/public/Logo.svg"
 import background from "/public/dock.png"
 import { motion } from "framer-motion"
 
