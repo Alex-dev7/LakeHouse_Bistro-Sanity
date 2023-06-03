@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+
 
 export default async function Home() {
   
@@ -20,11 +20,7 @@ export default async function Home() {
     </Link>
       { events ? <h2 className='text-red-400 text-center text-4xl font-bold my-8'>Events</h2> : ""}
       { events.map((event, i) => (
-        <motion.div
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
-        transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
-        viewport={{ once: true }}
+        <div
         key={i} 
         className='grid grid-cols-2 justify-between w-10/12 my-4 mx-auto bg-amber-200 p-4 shadow-md'
         >
@@ -33,7 +29,7 @@ export default async function Home() {
             <PortableText value={event.content} />
           </div>
           <Image src={event.image} alt={event.title}  width={500} height={300} className='object-cover h-[300px]  mx-auto  border-[8px] border-white rounded-md'/>
-        </motion.div>
+        </div>
       ))}
     </main>
     </>

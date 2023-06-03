@@ -32,3 +32,18 @@ header {
   /* border: .5px solid black; */
 
 }
+
+.logo{
+  animation: lakeLogo 1s ease-out  normal forwards;
+}
+@keyframes lakeLogo {
+	0% {
+    opacity: 0;
+		transform: translateY(0);
+	}
+
+	100% {
+    opacity: 1;
+		transform: translateY(-90px);
+	}
+}
