@@ -1,22 +1,30 @@
-"use client"
+'use client'
 
 import { getRestaurantInfo } from "@/sanity/sanity-utils"
 import Link from "next/link"
 import { CiFacebook, CiInstagram } from "react-icons/ci"
 import { TbBrandTiktok } from "react-icons/tb"
 import { usePathname } from 'next/navigation'
-
+import React , { useState } from "react"
 
 
 async function Nav() {
-
+  
+const [toggle, setToggle] = useState(true)
 const pathname = usePathname();
+
 const [restaurantInfo] = await getRestaurantInfo()
- 
+
+function handleClick(){
+  console.log("works")
+  setToggle(!toggle)
+ console.log(toggle)
+}
+  
   return (
     <div id="div" className="w-full  flex flex-col ">
-        <div className="flex justify-between py-5 border-b border-black   px-4">
-            <div className="flex gap-5 text-lg self-center w-[202px]">
+        <div className="flex flex-row  justify-between py-5 border-b border-black   px-4">
+            <div className="hidden md:flex gap-5 text-lg self-center w-[202px]">
                 <a href={restaurantInfo.facebook} target="_blank">
                     <CiFacebook className="text-2xl hover:text-amber-600"/>
                 </a>
@@ -28,11 +36,19 @@ const [restaurantInfo] = await getRestaurantInfo()
                 </a>                
             </div>
             
-            <Link href="/" as={'/'} className="text-2xl font-bold ">Lake House Bistro</Link>
-            <span className="text-sm text-gray-400 self-center w-[202px] text-right">325 Canada St, Lake George, NY </span>
+            <Link href="/" as={'/'} className="text-xl  md:text-2xl font-bold ">Lake House Bistro</Link>
+            <div className="md:hidden" >
+			        <button onClick={() => handleClick()} className=" flex items-center text-gray-600 p-3">
+                  <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                  </svg>
+			      </button>
+		      </div>
+            <span className="text-sm hidden md:flex text-gray-400 self-center w-[202px] text-right">325 Canada St, Lake George, NY </span>
         </div>
      
-        <nav className={`flex justify-center  gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1`}>
+        <nav className={` ${toggle ? "flex" : "hidden"} flex-col md:flex-row  md:visible justify-center  gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1`}>
           <Link href="/" as={'/'} className={`${pathname === "/" ? "bg-amber-100 text-amber-700 font-bold" : ""} link px-4 py-3 hover:text-amber-400 mx-2`} >
                 HOME  
           </Link>  

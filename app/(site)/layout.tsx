@@ -1,4 +1,5 @@
 
+
 import Nav from './components/Nav'
 import '../globals.css'
 import Footer from './components/Footer'
@@ -16,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en"  >
       
-      <body className="max-w-screen-2xl  mx-auto  box-border">
+      <body className="md:max-w-screen-2xl  mx-auto  box-border">
         {/* @ts-expect-error Server Component */}
       <Nav />
       <div className=' min-h-screen md:min-h-[700px] lg:min-h-[800px]'>

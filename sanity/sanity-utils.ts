@@ -7,6 +7,7 @@ import { Hours } from "@/types/Hours";
 import Gallery from "@/types/Gallery";
 import  Menu from "@/types/Menu";
 import { Event } from "@/types/Event";
+import next from "next/types";
 
 
 
@@ -24,7 +25,7 @@ export async function getRestaurantInfo(): Promise<Restaurant[]> {
             facebook,
             instagram,
             tiktok
-        }`
+        }`,  { cache: 'no-store' }
     )
 }
 
