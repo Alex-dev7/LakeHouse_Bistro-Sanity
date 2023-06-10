@@ -7,12 +7,14 @@ import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
 
 
+
 export default async function Home() {
   
   
   const events  = await getEvent()
 
   return ( <>
+
     <Header />
 
     <main className="my-[50px] bg-white z-10 py-8">

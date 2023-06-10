@@ -1,40 +1,63 @@
 'use client'
 
-import { getRestaurantInfo } from "@/sanity/sanity-utils"
+
 import Link from "next/link"
 import { CiFacebook, CiInstagram } from "react-icons/ci"
 import { TbBrandTiktok } from "react-icons/tb"
+import { getRestaurantInfo } from "@/sanity/sanity-utils"
 import { usePathname } from 'next/navigation'
-import React , { useState } from "react"
+import React , { useEffect, useState, useRef} from "react"
+// import SocialLinks from "./SocialLinks"
 
 
-async function Nav() {
-  
-const [toggle, setToggle] = useState(true)
+
+function Nav() {
+
+const [toggle, setToggle] = useState(false)
+const [info, setInfo] = useState({})
 const pathname = usePathname();
 
-const [restaurantInfo] = await getRestaurantInfo()
+
+
 
 function handleClick(){
-  console.log("works")
-  setToggle(!toggle)
- console.log(toggle)
-}
   
+ setToggle(!toggle)
+  
+console.log(toggle)
+
+}
+
+// const arr = []
+
+
+
+  useEffect(() => {
+    const data = async () => {
+      const [...restaurantInfo] = await getRestaurantInfo()
+      setInfo({...restaurantInfo[0]})
+      console.log(info)
+    }
+    data()
+   
+  }, []);
+
   return (
     <div id="div" className="w-full  flex flex-col ">
         <div className="flex flex-row  justify-between py-5 border-b border-black   px-4">
-            <div className="hidden md:flex gap-5 text-lg self-center w-[202px]">
-                <a href={restaurantInfo.facebook} target="_blank">
-                    <CiFacebook className="text-2xl hover:text-amber-600"/>
-                </a>
-                <a href={restaurantInfo.instagram} target="_blank" >
-                    <CiInstagram className="text-2xl hover:text-amber-600"/>
-                </a>
-                <a href={restaurantInfo.tiktok} target="_blank">
-                    <TbBrandTiktok className="text-2xl hover:text-amber-600"/>
-                </a>                
+
+           <div className="hidden md:flex gap-5 text-lg self-center w-[202px]">
+              <a href={info?.facebook} target="_blank">
+                  <CiFacebook className="text-2xl hover:text-amber-600"/>
+              </a>
+              <a href={info?.instagram} target="_blank" >
+                  <CiInstagram className="text-2xl hover:text-amber-600"/>
+              </a>
+              <a href={info?.tiktok} target="_blank">
+                  <TbBrandTiktok className="text-2xl hover:text-amber-600"/>
+              </a>                
             </div>
+
             
             <Link href="/" as={'/'} className="text-xl  md:text-2xl font-bold ">Lake House Bistro</Link>
             <div className="md:hidden" >
@@ -48,7 +71,7 @@ function handleClick(){
             <span className="text-sm hidden md:flex text-gray-400 self-center w-[202px] text-right">325 Canada St, Lake George, NY </span>
         </div>
      
-        <nav className={` ${toggle ? "flex" : "hidden"} flex-col md:flex-row  md:visible justify-center  gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1`}>
+        <nav  className={` ${toggle ? "hidden" : "flex"}  transition-all flex-col md:flex-row  md:visible justify-center  gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1`}>
           <Link href="/" as={'/'} className={`${pathname === "/" ? "bg-amber-100 text-amber-700 font-bold" : ""} link px-4 py-3 hover:text-amber-400 mx-2`} >
                 HOME  
           </Link>  

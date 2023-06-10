@@ -25,7 +25,7 @@ export async function getRestaurantInfo(): Promise<Restaurant[]> {
             facebook,
             instagram,
             tiktok
-        }`,  { cache: 'no-store' }
+        }`
     )
 }
 
@@ -37,7 +37,7 @@ export async function getEvent(): Promise<Event[]> {
             title,
             content,
             "image": image.asset->url
-        }`
+        }`,  { cache: 'no-store' }
     )
 }
 
