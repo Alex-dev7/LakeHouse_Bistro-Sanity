@@ -33,7 +33,7 @@ async function Gallery() {
   <>
   <div className='gallery py-8 z-50  flex flex-col border-[0.5px] border-yellow-500'>
      
-      {/* @ts-expect-error Async Server Component */}
+    
       <BigImage i={gallery[index].image}  />
  
       <div  className='relative flex items-center align-top'>

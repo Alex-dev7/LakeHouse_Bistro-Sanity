@@ -7,7 +7,7 @@ import { Hours } from "@/types/Hours";
 import Gallery from "@/types/Gallery";
 import  Menu from "@/types/Menu";
 import { Event } from "@/types/Event";
-import next from "next/types";
+
 
 
 
