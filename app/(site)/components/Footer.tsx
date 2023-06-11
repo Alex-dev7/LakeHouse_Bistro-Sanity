@@ -77,7 +77,7 @@ async function Footer() {
     </footer>
     <div className="flex justify-between px-4 bg-slate-800 text-slate-300 text-sm p-2">
         <p>Copyright © 2023 Lake House Bistro</p>
-        <p>built by <a href="#">Alexei Rusu</a></p>
+        <p>built by <a href="#">AR</a></p>
     </div>
     </>
   )

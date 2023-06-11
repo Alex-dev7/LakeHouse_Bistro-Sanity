@@ -8,13 +8,13 @@ function Career() {
         <div className="sm:w-fit sm:mx-auto  md:mx-6 ">
         
             <form action="https://formsubmit.co/c60d6b50cbdecbe2c930c286a9425268" method="POST" encType="multipart/form-data"
-               className="flex flex-col gap-5"
+               className="flex flex-col gap-2 md:gap-5 p-6"
             >
                 
 
-                <fieldset>
+                <fieldset >
                     <legend className="title">Name </legend>
-                    <div className="flex gap-8">
+                    <div className="flex flex-col md:flex-row gap-2 md:gap-8">
                        <label>
                        <input type="text" name="name" required />
                        <p className="italic font-thin">First </p> 
@@ -26,7 +26,7 @@ function Career() {
                        </label> 
                     </div>
                 </fieldset> 
-                <fieldset className="flex gap-8">
+                <fieldset className="flex gap-2 md:gap-8 flex-col md:flex-row">
                     
                     <label>
                         <legend className="title">Phone </legend>
@@ -64,7 +64,7 @@ function Career() {
                     <label>
                         <legend className="title">What is your availability Monday-Saturday?</legend>
                         <div className="italic font-thin">Days you can work as well as if you are looking for part-time or full-time work.</div>
-                        <textarea className=" sm:w-[400px] md:w-[600px] h-[120px] p-2" name="Their Message"></textarea>
+                        <textarea className=" w-[320px] md:w-[600px] h-[120px] p-2" name="Their Message"></textarea>
                       
                     </label>
                 

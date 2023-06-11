@@ -9,7 +9,7 @@ function Header() {
     <header className="flex flex-col align-middle justify-center relative">
             <Image src={background} alt={""}  width={1920} height={1281} priority className="w-full h-[85vh] object-cover z-0"/>
             <div
-            className="z-10 absolute self-center -translate-x-10 ">
+            className="z-10 absolute self-center -translate-x-5 ">
               <Image src={logo} alt="logo" width={700} height={800} priority className="logo"/>            
             </div>
 
