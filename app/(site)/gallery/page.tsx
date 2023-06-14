@@ -4,7 +4,8 @@ import Image from 'next/image'
 import { BsChevronCompactLeft, BsChevronCompactRight  } from "react-icons/bs"
 import { getGallery } from '@/sanity/sanity-utils'
 import BigImage from './component/BigImage'
-import  { useState } from 'react'
+import  { useState, useEffect, Suspense } from 'react'
+import Loading from './loading'
 
 
 async function Gallery() {
@@ -14,9 +15,15 @@ async function Gallery() {
    const gallery = await getGallery()
  
 
+   
+
    function handleClick(i: number) {
+    
     setIndex(i)
+    console.log(i)
+
   }
+
 
 
     const slideLeft = () => {
@@ -31,16 +38,20 @@ async function Gallery() {
     
   return (
   <>
-  <div className='gallery py-8 z-50  flex flex-col border-[0.5px] border-yellow-500'>
-     
+  <div className='gallery py-8 z-50  flex flex-col '>
+     <div className="h-[400px] md:h-[600px]">
+          <Suspense fallback={<Loading/>}>
+        <BigImage src={gallery[index].image}  />
+      </Suspense>
+     </div>
+
     
-      <BigImage i={gallery[index].image}  />
  
       <div  className='relative flex items-center align-top'>
         <BsChevronCompactLeft
-        className='h-[220px] hover:bg-gray-300 rounded-md mx-2'
+        className='h-[80px] md:h-[150px] bg-gray-300  hover:bg-gray-400 rounded-md mx-2'
         onClick={slideLeft} size={40} />
-        <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth p-4 scrollbar-hide'>
+        <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth  p-4 pl-0 scrollbar-hide'>
             {gallery?.map((img, i) => (
                 <div key={i}
                 className='w-fit  p-2 cursor-pointer  inline-block '
@@ -49,17 +60,17 @@ async function Gallery() {
                     <Image 
                     src={img.image}
                     alt={img.caption || "Lake House Bistro"}
-                    width={220}
-                    height={250}
+                    width={115}
+                    height={150}
                     quality={5} 
-                    className='w-auto max-h-[200px] brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
+                    className='h-[80px] md:h-[150px] w-auto brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
                     />
 
                 </div>
             ))}        
         </div>
               <BsChevronCompactRight
-              className='h-[220px] hover:bg-gray-300 rounded-md mx-2'
+              className='h-[80px] md:h-[150px] bg-gray-300 hover:bg-gray-400 rounded-md mx-2'
               onClick={slideRight} size={40} />
       </div>
     </div>

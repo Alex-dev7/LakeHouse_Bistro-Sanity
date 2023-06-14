@@ -10,7 +10,7 @@ import { Suspense } from "react"
     children: React.ReactNode
   }) {
     return (
-        <section className="gallery min-h-screen md:min-h-[700px] lg:min-h-[800px]  bg-orange-100 ">
+        <section className="gallery min-h-screen md:min-h-[700px] lg:min-h-[800px]  ">
           
             {children}
            
