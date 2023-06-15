@@ -14,17 +14,12 @@ async function Gallery() {
    const [index, setIndex] = useState(0)
    const gallery = await getGallery()
  
-
-   
-
-   function handleClick(i: number) {
+  function handleClick(i: number) {
     
     setIndex(i)
     console.log(i)
 
   }
-
-
 
     const slideLeft = () => {
       const slider =  document.getElementById('slider')
@@ -47,11 +42,11 @@ async function Gallery() {
 
     
  
-      <div  className='relative flex items-center align-top'>
+      <div  className='relative flex items-center align-top mt-4 '>
         <BsChevronCompactLeft
         className='h-[80px] md:h-[150px] bg-gray-300  hover:bg-gray-400 rounded-md mx-2'
         onClick={slideLeft} size={40} />
-        <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth  p-4 pl-0 scrollbar-hide'>
+        <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth p-4 pl-0 scrollbar-hide'>
             {gallery?.map((img, i) => (
                 <div key={i}
                 className='w-fit  p-2 cursor-pointer  inline-block '
