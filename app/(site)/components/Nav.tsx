@@ -53,14 +53,14 @@ useEffect(() => {
 
             <Link href="/" as={'/'} className="text-xl py-2 font-medium md:text-2xl md:font-bold ">Lake House Bistro</Link>
             <div className="md:hidden" >
-			        <button onClick={() => handleClick()} className="flex items-center text-gray-600 p-3">
+			        <button onClick={() => handleClick()} className=" flex  items-center text-gray-600 p-3">
                   <svg className="block h-6 w-6 fill-current " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Mobile menu</title>
                     { !toggle ? <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path> :
                      <path d="M0 0 L20 20 M0 20 L20 0" stroke="white" strokeWidth="2" />}
                   </svg>
-			      </button>
-		      </div>
+			        </button>
+		        </div>
             <span className="text-sm hidden md:flex text-gray-400 self-center w-[202px] text-right">325 Canada St, Lake George, NY </span>
         </div>
      

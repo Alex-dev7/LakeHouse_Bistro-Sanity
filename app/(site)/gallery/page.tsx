@@ -36,7 +36,7 @@ async function Gallery() {
   <div className='gallery py-8 z-50  flex flex-col '>
      <div className="h-[400px] md:h-[600px]">
           <Suspense fallback={<Loading/>}>
-        <BigImage src={gallery[index].image}  />
+        <BigImage src={gallery[index].image} caption={gallery[index].caption} />
       </Suspense>
      </div>
 
