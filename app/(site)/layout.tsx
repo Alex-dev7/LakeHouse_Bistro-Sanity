@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className='bg-gray-50'>
         <div className="bg-white md:max-w-screen-2xl  mx-auto  box-border shadow-2xl shadow-gray-400  ">
         <Nav />
-        <div className=' min-h-screen md:min-h-[700px] lg:min-h-[800px]'>
+        <div className=' min-h-fit '>
           {children}
         </div> 
           <Footer/>

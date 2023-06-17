@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { BsChevronCompactLeft, BsChevronCompactRight  } from "react-icons/bs"
 import { getGallery } from '@/sanity/sanity-utils'
 import BigImage from './component/BigImage'
-import  { useState, useEffect, Suspense } from 'react'
+import  { useState, Suspense } from 'react'
 import Loading from './loading'
 
 
@@ -23,18 +23,18 @@ async function Gallery() {
 
     const slideLeft = () => {
       const slider =  document.getElementById('slider')
-      slider ? slider.scrollLeft = slider.scrollLeft - 440 : null
+      slider ? slider.scrollLeft = slider.scrollLeft - 240 : null
     }
 
     const slideRight = () => {
       const slider =  document.getElementById('slider')
-      slider ? slider.scrollLeft = slider.scrollLeft + 440 : null
+      slider ? slider.scrollLeft = slider.scrollLeft + 240 : null
     }
     
   return (
   <>
-  <div className='gallery py-8 z-50  flex flex-col '>
-     <div className="h-[400px] md:h-[600px]">
+  <div className='h-[100%] py-8 z-50  flex flex-col '>
+     <div className="h-[400px] sm:h-[500px] md:h-[600px]">
           <Suspense fallback={<Loading/>}>
         <BigImage src={gallery[index].image} caption={gallery[index].caption} />
       </Suspense>

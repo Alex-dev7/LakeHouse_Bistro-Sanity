@@ -35,7 +35,7 @@ useEffect(() => {
 
   return (
     <div id="div"  className="w-full flex flex-col ">
-        <div className="flex  bg-transparent flex-row z-50 justify-between py-2 md:py-5 border-b-[0.5px] border-black relative  px-4">
+        <div className="flex  bg-transparent flex-row z-50 justify-between py-2 border-b-[0.5px] border-black relative  px-4">
            <div className="hidden md:flex gap-5 text-lg self-center w-[202px] ">
             {/* @ts-expect-error Async Server Component */}
               <a href={info?.facebook} target="_blank">
