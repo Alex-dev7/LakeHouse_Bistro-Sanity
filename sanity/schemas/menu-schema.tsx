@@ -14,6 +14,11 @@ const menu = {
             name: 'file',
             title: 'File',
             type: 'file',
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image'
         }
     ]
 }

@@ -6,9 +6,11 @@ function Career() {
   return (
     <>
       <div className="career border-[0.5px]">
-        <h3 className="font-bold text-center text-xl py-4">Lake House Bistro - Employment Application</h3> 
-        <div className="flex gap-4 sm:w-fit sm:mx-auto  md:mx-6  lg:mx-auto ">
-        
+        <h3 className="font-bold text-center text-xl py-6 mx-2">Lake House Bistro - Employment Application</h3> 
+        <div className="flex flex-col gap-4 w-fit mx-auto ">
+            <div className='flex justify-center items-center mx-auto  w-fit'>
+                <Image src="/serversImage.jpg" alt="s" height={400} width={400} className='h-[150px]  md:h-[200px]  w-auto '/>
+            </div>
             <form action="https://formsubmit.co/c60d6b50cbdecbe2c930c286a9425268" method="POST" encType="multipart/form-data"
                className="flex flex-col gap-2 md:gap-5 p-6"
             >
@@ -32,8 +34,7 @@ function Career() {
                     
                     <label>
                         <legend className="title">Phone </legend>
-                        <input type="tel" name="phone" maxLength={10} pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required />
-                        {/* <p className="caption-text">(format xxxxxxxxxx)</p> */}
+                        <input type="tel" name="phone" maxLength={10} pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required />
                     </label>
 
                     
@@ -83,10 +84,6 @@ function Career() {
                  </div>
                   
            </form>
-
-           <div className='flex justify-center items-center md:absolute bottom-[50%] lg:relative w-[405px]'>
-                <Image src="/serversImage.jpg" alt="s" height={400} width={400} className='h-[200px]  md:h-[200px]  w-auto'/>
-           </div>
         </div>
     
       </div>

@@ -9,7 +9,7 @@ async function About() {
     const [ about ] = await getAbout()
 
   return (
-    <section className="about h-[85vh] w-full p-6 md:p-20">
+    <section className="about min-h-[85vh] w-full p-6 md:p-20">
         <div className=" flex flex-col md:grid  md:grid-cols-2  gap-4">
             <h3 className="col-span-2 font-bold text-orange-500 text-center text-2xl md:text-4xl my-8">{about.title}</h3>
             <div className="text-md md:text-lg line-height-4 text-gray-600 text-justify">

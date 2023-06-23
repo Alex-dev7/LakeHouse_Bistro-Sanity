@@ -68,7 +68,7 @@ useEffect(() => {
           <Link href="/" as={'/'} className={`${pathname === "/" ? "bg-amber-100 text-amber-700 font-bold" : ""} link px-4 py-3 hover:text-amber-400 mx-2`} >
                 HOME  
           </Link>  
-          <Link href="/about" as={'/about'} className={`${pathname === "/about" ? "bg-amber-100 text-amber-700 font-bold" : ""} link  px-4 py-3 hover:text-amber-600 mx-2`}>
+          <Link href="/about" as={'/about'} className={`${pathname === "/about" ? "bg-amber-100  text-amber-700 font-bold" : ""} link  px-4 py-3 hover:text-amber-600 mx-2`}>
                 ABOUT
           </Link>
           <Link href="/menu" as={'/menu'} className={`${pathname === "/menu" ? "bg-amber-100 text-amber-700 font-bold" : ""} link hover:text-amber-400 px-4 py-3 mx-2`}>

@@ -83,7 +83,8 @@ export async function getMenu(): Promise<Menu[]> {
     return createClient(clientConfig).fetch(
         groq`*[_type == "menu"]{
             title,
-            "file": file.asset->url
+            "file": file.asset->url,
+            "image": image.asset->url,
         }`
     )
 }
