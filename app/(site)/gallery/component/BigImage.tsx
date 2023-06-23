@@ -3,9 +3,9 @@
 import Image from "next/image"
 
 
-async function BigImage({src, caption}: any ){
+function BigImage({src, caption}: any ){
 
-  const img = await src
+  const img =  src
 
 
   return (

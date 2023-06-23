@@ -1,11 +1,13 @@
 import './career.css'
+import Image from 'next/image'
+import ServerImage from "../../../public/job-application.svg"
 
 function Career() {
   return (
     <>
-        <div className="career border-[0.5px] ">
+      <div className="career border-[0.5px]">
         <h3 className="font-bold text-center text-xl py-4">Lake House Bistro - Employment Application</h3> 
-        <div className="sm:w-fit sm:mx-auto  md:mx-6 ">
+        <div className="flex gap-4 sm:w-fit sm:mx-auto  md:mx-6  lg:mx-auto ">
         
             <form action="https://formsubmit.co/c60d6b50cbdecbe2c930c286a9425268" method="POST" encType="multipart/form-data"
                className="flex flex-col gap-2 md:gap-5 p-6"
@@ -81,9 +83,13 @@ function Career() {
                  </div>
                   
            </form>
+
+           <div className='flex justify-center items-center md:absolute bottom-[50%] lg:relative w-[405px]'>
+                <Image src="/serversImage.jpg" alt="s" height={400} width={400} className='h-[200px]  md:h-[200px]  w-auto'/>
+           </div>
         </div>
     
-        </div>
+      </div>
     </>
   )
 }

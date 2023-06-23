@@ -7,6 +7,10 @@ import BigImage from './component/BigImage'
 import  { useState, Suspense } from 'react'
 import Loading from './loading'
 
+// export const dynamicParams = false,
+// revalidate = 300, 
+// dynamic = "auto"
+export const revalidate = 1
 
 async function Gallery() {
 
@@ -36,7 +40,10 @@ async function Gallery() {
   <div className='h-[100%] py-8 z-50  flex flex-col '>
      <div className="h-[400px] sm:h-[500px] md:h-[600px]">
           <Suspense fallback={<Loading/>}>
-        <BigImage src={gallery[index].image} caption={gallery[index].caption} />
+            { index !== null && (
+               <BigImage src={gallery[index].image} caption={gallery[index].caption} />
+            )}
+       
       </Suspense>
      </div>
 
