@@ -27,7 +27,7 @@ async function Footer() {
   return (
     <>
     <footer  className="w-full h-fit  flex flex-col md:flex-row flex-wrap lg:grid-cols-3 gap-8 bg-slate-700  text-white  p-4 content-center">
-        <div id="contact" className="flex flex-col gap-2   max-w-[400px] sm:w-[400px] sm:mx-auto  ">
+        <div id="contact" className="flex flex-col gap-2   max-w-[400px] sm:w-[400px] sm:mx-auto  backdrop-brightness-50 p-3">
             <h4 className="my-2">CONTACT US</h4>
             <a href={info.reserve} target="_blank" className=" text-bold flex gap-4 hover:text-orange-400">
             <span>&#9734;</span> Make a reservation
@@ -57,11 +57,11 @@ async function Footer() {
             </div>
 
         </div>
-        <div className="sm:mx-auto   max-w-[400px] sm:w-[400px] space-y-1">
+        <div className="sm:mx-auto   max-w-[400px] sm:w-[400px] space-y-1 backdrop-brightness-[0.4] p-3">
         <h4 className="my-2">OPENING HOURS</h4>
         {hours?.map((hour, i) => (
             
-            <div key={i} className="flex gap-11 justify-between text-gray-400">
+            <div key={i} className="flex gap-11 justify-between text-gray-300">
                <p>{hour.day}</p>
                <div className="space-x-3">
                    <span>{hour.open}</span>
