@@ -14,7 +14,7 @@ function Header() {
             </div>
 
             <a        
-            href="#" className="z-10 absolute text-white w-fit mx-auto border-2 border-white px-5 py-2 self-center translate-y-[20vh] rounded-3xl text-lg mt-10 hover:bg-orange-400 hover:opacity-90 transition animate-pulse">
+            href="#" className="z-10 absolute text-white w-fit mx-auto border-2 border-white px-5 py-2 self-center translate-y-[20vh] rounded-3xl text-lg mt-10 hover:bg-orange-400 hover:opacity-90 transition animate-pulse shadow-orange-300 shadow-lg">
                 Book A Table
             </a>           
          

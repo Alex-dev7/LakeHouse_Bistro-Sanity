@@ -23,7 +23,7 @@ export default async function Home() {
     See our menu <span>&#9832;</span>
     </Link>
     <hr className='my-4'/>
-      { events ? <h2 className='text-red-400 text-center text-4xl font-bold my-8'>Events</h2> : ""}
+      { events ? <h2 className='text-sky-600 text-center text-4xl font-bold my-8'>Events</h2> : ""}
       { events.map((event, i) => (
         <div
         key={i} 
@@ -35,7 +35,7 @@ export default async function Home() {
           </div>
           <Image src={event.image} alt={event.title}  width={500} height={300} className='object-cover h-[300px]  mx-auto  border-[8px] border-white rounded-md'/>
         </div>
-      ))}
+      ))} 
     </main>
     </>
   )

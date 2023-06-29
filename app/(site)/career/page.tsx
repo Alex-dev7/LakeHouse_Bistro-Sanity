@@ -9,7 +9,7 @@ function Career() {
         <h3 className="font-bold text-center text-xl py-6 mx-2">Lake House Bistro - Employment Application</h3> 
         <div className="flex flex-col gap-4 w-fit mx-auto ">
             <div className='flex justify-center items-center mx-auto  w-fit'>
-                <Image src="/serversImage.jpg" alt="s" height={400} width={400} className='h-[150px]  md:h-[200px]  w-auto '/>
+                <Image src="/serversImage.jpg" alt="s" height={400} width={400} className='h-[150px]  md:h-[200px]  w-auto  border-2 shadow-md'/>
             </div>
             <form action="https://formsubmit.co/c60d6b50cbdecbe2c930c286a9425268" method="POST" encType="multipart/form-data"
                className="flex flex-col gap-2 md:gap-5 p-6"
