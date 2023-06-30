@@ -2,7 +2,6 @@
 import { getOpeningInfo, getRestaurantInfo } from "@/sanity/sanity-utils"
 import { GrLocation, GrPhone, GrMail } from "react-icons/gr"
 import { CiFacebook, CiInstagram } from "react-icons/ci"
-import { TbBrandTiktok } from "react-icons/tb"
 
 
 async function Footer() {
@@ -51,10 +50,7 @@ async function Footer() {
                 </a>
                 <a href={restaurantInfo.instagram} target="_blank" className="hover:text-orange-400">
                     <CiInstagram/>
-                </a>
-                <a href={restaurantInfo.tiktok} target="_blank" className="hover:text-orange-400">
-                    <TbBrandTiktok/>
-                </a>                  
+                </a>                
             </div>
 
         </div>

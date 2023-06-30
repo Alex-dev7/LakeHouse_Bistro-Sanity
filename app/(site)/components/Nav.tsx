@@ -3,7 +3,6 @@
 
 import Link from "next/link"
 import { CiFacebook, CiInstagram } from "react-icons/ci"
-import { TbBrandTiktok } from "react-icons/tb"
 import { getRestaurantInfo } from "@/sanity/sanity-utils"
 import { usePathname } from 'next/navigation'
 import { useEffect, useState} from "react"
@@ -44,11 +43,7 @@ useEffect(() => {
               {/* @ts-expect-error Async Server Component */}
               <a href={info?.instagram} target="_blank" >
                   <CiInstagram className="text-2xl hover:text-amber-600"/>
-              </a>
-              {/* @ts-expect-error Async Server Component */}
-              <a href={info?.tiktok} target="_blank">
-                  <TbBrandTiktok className="text-2xl hover:text-amber-600"/>
-              </a>                
+              </a>           
             </div>
 
             <Link href="/" as={'/'} className="text-xl py-2 font-medium md:text-2xl md:font-bold ">Lake House Bistro</Link>

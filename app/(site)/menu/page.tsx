@@ -13,7 +13,7 @@ async function Menu() {
         <h1 className="absolute top-14 text-2xl mx-4 text-justify">Our Menu.</h1>
         {/* <span className="absolute top-20 italic text-gray-500 mx-4 text-justify">“So long as you have food in your mouth you have solved all questions for the time being.” –Franz Kafka</span> */}
           {menu.map((item, i) => (
-              <a href={item.file} target="_blank" key={i}
+              <a href={item.file} target="_blank" key={i} 
               className="max-w-[300px] h-[110px] md:h-[280px] text-xl  self-center brightness-20 flex justify-center shadow-lg  bg-black hover:shadow-none hover:-translate-y-2 transition-all duration-300 border-4 border-white"
               >
                   <Image src={item.image} alt="df" width={300} height={400} className="object-cover md:opacity-75 hover:opacity-100 transition-all"/>
@@ -24,7 +24,6 @@ async function Menu() {
           }
       </div>    
     </>
-///testing
   )
 }
 
