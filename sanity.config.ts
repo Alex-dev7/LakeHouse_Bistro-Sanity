@@ -12,7 +12,7 @@ const config = defineConfig({
     title: "LakeHouse Bistro",
     apiVersion: "2023-04-17",
     basePath: "/admin",
-    plugins: [ dashboardTool({
+    plugins: [deskTool(), dashboardTool({
         widgets: [
             netlifyWidget({
                 title: 'LakeHouse Bistro',
