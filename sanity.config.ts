@@ -12,10 +12,10 @@ const config = defineConfig({
     title: "LakeHouse Bistro",
     apiVersion: "2023-04-17",
     basePath: "/admin",
-    plugins: [deskTool(), dashboardTool({
+    plugins: [ dashboardTool({
         widgets: [
             netlifyWidget({
-                title: 'My Netlify deploys',
+                title: 'LakeHouse Bistro',
                 sites: [
                   {
                     title: 'Sanity Studio',
@@ -24,11 +24,11 @@ const config = defineConfig({
                     name: 'lakehousebistro',
                   },
                   {
-                    title: 'Website',
+                    title: 'LakeHouse',
                     apiId: 'b6f3806c-89b4-47fc-9618-b01837ef00cf',
                     buildHookId: '649e357179a9e31d369ee717',
                     name: 'lakehousebistro',
-                    url: 'https://my-sanity-deployment.com',
+                    url: 'https://lakehousebistro.com',
                   }
                 ]
             })
@@ -39,3 +39,5 @@ const config = defineConfig({
 })
 
 export default config
+
+// deskTool(),
