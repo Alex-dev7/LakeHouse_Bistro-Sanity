@@ -35,13 +35,7 @@ const restaurant = {
             name: 'instagram',
             title: 'Instagram',
             type: 'url',
-        },
-        {
-            name: 'tiktok',
-            title: 'TikTok',
-            type: 'url',
-        },
-
+        }
     ]
 }
 

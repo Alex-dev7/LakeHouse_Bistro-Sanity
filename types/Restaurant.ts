@@ -6,5 +6,4 @@ export type Restaurant = {
     reserve: string;
     facebook: string;
     instagram: string;
-    tiktok: string;
 }

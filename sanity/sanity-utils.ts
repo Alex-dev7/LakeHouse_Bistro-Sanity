@@ -1,5 +1,6 @@
 
-import { createClient, groq } from "next-sanity";
+import {  groq } from "next-sanity";
+import { createClient} from '@sanity/preview-kit/client'
 import clientConfig  from "./config/client-config"
 import { Restaurant } from "@/types/Restaurant";
 import { About } from "@/types/About";
@@ -23,8 +24,7 @@ export async function getRestaurantInfo(): Promise<Restaurant[]> {
             email,
             reserve,
             facebook,
-            instagram,
-            tiktok
+            instagram
         }`
     )
 }
