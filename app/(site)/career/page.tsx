@@ -1,6 +1,6 @@
 import './career.css'
 import Image from 'next/image'
-import ServerImage from "../../../public/job-application.svg"
+
 
 function Career() {
   return (

@@ -17,7 +17,7 @@ async function Menu() {
               className="max-w-[300px] h-[110px] md:h-[280px] text-xl  self-center brightness-20 flex justify-center shadow-lg  bg-black hover:shadow-none hover:-translate-y-2 transition-all duration-300 border-4 border-white"
               >
                   <Image src={item.image} alt="df" width={300} height={400} className="object-cover md:opacity-75 hover:opacity-100 transition-all"/>
-                  <h4 className="text-xl md:text-2xl w-[280px] h-[80px] py-6 text-center self-center absolute text-white font-bold backdrop-brightness-75 tracking-wide">{item.title}</h4>
+                  <h4 className="text-xl md:text-2xl w-[280px] h-[80px] py-6 text-center self-center absolute text-white font-bold backdrop-brightness-50 tracking-wide">{item.title}</h4>
               </a>            
           ))
 
