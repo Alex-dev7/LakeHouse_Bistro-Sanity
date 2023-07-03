@@ -64,7 +64,7 @@ async function Gallery() {
                     alt={img.caption || "Lake House Bistro"}
                     width={115}
                     height={150}
-                    quality={5} 
+                    quality={50} 
                     className='h-[80px] md:h-[150px] w-auto brightness-75 rounded-lg shadow-gray-400 shadow-md hover:-translate-y-2 hover:brightness-100 transition-all'
                     />
 

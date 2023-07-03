@@ -60,7 +60,7 @@ useEffect(() => {
         </div>
      
         <nav onClick={() => setToggle(false)}  className={` ${toggle ? "static -top-10 overscroll-contain  justify-center text-center text-white z-20 bg-slate-800 bg-opacity-95 w-full h-[110%] " : "absolute text-center w-full h-full -top-[100%]   z-20"} transition-all duration-300 ease-in-out z-0 flex flex-col absolute md:relative md:flex  md:flex-row  md:visible justify-center  gap-2 text-md antialiased tracking-wide bg-opacity-20 my-1 `}>
-          <Link href="/" as={'/'} className={`${pathname === "/" ? "bg-amber-100 text-amber-700 font-bold" : ""} link px-4 py-3 hover:text-amber-400 mx-2`} >
+          <Link href="/" className={`${pathname === "/" ? "bg-amber-100 text-amber-700 font-bold" : ""} link px-4 py-3 hover:text-amber-400 mx-2`} >
                 HOME  
           </Link>  
           <Link href="/about" as={'/about'} className={`${pathname === "/about" ? "bg-amber-100  text-amber-700 font-bold" : ""} link  px-4 py-3 hover:text-amber-600 mx-2`}>
