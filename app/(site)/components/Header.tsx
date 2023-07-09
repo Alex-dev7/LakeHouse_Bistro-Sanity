@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import { getRestaurantInfo } from "@/sanity/sanity-utils"
 import Image from "next/image"
@@ -11,7 +11,7 @@ const [ info ]= await getRestaurantInfo()
 
   return (
     <header className="flex flex-col align-middle justify-center relative">
-            <Image src={background} alt={""}  width={1920} height={1281} priority className="w-full h-[85vh] object-cover z-0 brightness-50"/>
+            <Image src={background} alt={"restaurant background"}  width={1920} height={1281} priority className="w-full h-[85vh] object-cover z-0 brightness-50"/>
             <div
             className="z-10 absolute self-center -translate-x-5 ">
               <Image src={logo} alt="logo" width={700} height={800} priority className="logo"/>            
