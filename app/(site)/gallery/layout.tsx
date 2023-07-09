@@ -1,7 +1,10 @@
 
-"use client"
 
-import { Suspense } from "react"
+export const metadata = {
+  title: 'GALLERY',
+  description: 'Lake House Bistro Gallery Page',
+}
+
 
   
   export default function GalleryLayout({

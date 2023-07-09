@@ -3,6 +3,11 @@ import { getAbout } from "@/sanity/sanity-utils"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 
+export const metadata = {
+  title: 'ABOUT',
+  description: 'Lake House Bistro About Page',
+}
+
 
 async function About() {
 

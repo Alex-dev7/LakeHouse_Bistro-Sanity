@@ -2,6 +2,11 @@ import './career.css'
 import Image from 'next/image'
 
 
+export const metadata = {
+  title: 'Work Here',
+  description: 'Lake House Bistro Employment Application',
+}
+
 function Career() {
   return (
     <>

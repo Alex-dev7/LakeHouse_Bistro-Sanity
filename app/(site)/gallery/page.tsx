@@ -7,9 +7,7 @@ import BigImage from './component/BigImage'
 import  { useState, Suspense } from 'react'
 import Loading from './loading'
 
-// export const dynamicParams = false,
-// revalidate = 300, 
-// dynamic = "auto"
+
 export const revalidate = 1
 
 async function Gallery() {

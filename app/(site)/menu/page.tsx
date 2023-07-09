@@ -1,6 +1,11 @@
 import { getMenu } from "@/sanity/sanity-utils"
 import Image from "next/image"
 
+export const metadata = {
+  title: 'MENU',
+  description: 'Lake House Bistro Menu',
+}
+
 async function Menu() {
 
     const menu = await getMenu()
