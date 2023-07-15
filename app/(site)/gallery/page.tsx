@@ -60,6 +60,7 @@ async function Gallery() {
                     <Image 
                     src={img.image}
                     alt={img.caption || "Lake House Bistro"}
+                    loading='lazy'
                     width={115}
                     height={150}
                     quality={50} 

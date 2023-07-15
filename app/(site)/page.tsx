@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import { getEvent } from '@/sanity/sanity-utils'
 import Header from './components/Header'
